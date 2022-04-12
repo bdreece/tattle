@@ -73,18 +73,18 @@ func NewLogger(logPrefix, warnPrefix, errPrefix string, opts *LoggerOpts) Logger
 // Logf forwards format and args to fmt.Printf with log prefix and timestamp
 func (l Logger) Logf(format string, args ...any) {
 	message := fmt.Sprintf(format, args...)
-	fmt.Printf(FORMAT, l.LogSprint(l.LogPrefix), time.Now().Format(l.TimeFormat), message)
+	fmt.Printf(FORMAT, time.Now().Format(l.TimeFormat), l.LogSprint(l.LogPrefix), message)
 }
 
 // Logln forwards message to fmt.Printf with log prefix and timestamp
 func (l Logger) Logln(message string) {
-	fmt.Printf(FORMAT+"\n", l.LogSprint(l.LogPrefix), time.Now().Format(l.TimeFormat), message)
+	fmt.Printf(FORMAT+"\n", time.Now().Format(l.TimeFormat), l.LogSprint(l.LogPrefix), message)
 }
 
 // Warnf forwards format and args to fmt.Printf with warning prefix and timestamp
 func (l Logger) Warnf(format string, args ...any) {
 	message := fmt.Sprintf(format, args...)
-	fmt.Printf(FORMAT, l.WarnSprint(l.WarnPrefix), time.Now().Format(l.TimeFormat), message)
+	fmt.Printf(FORMAT, time.Now().Format(l.TimeFormat), l.WarnSprint(l.WarnPrefix), message)
 }
 
 // Warnln forwards message to fmt.Printf with warning prefix and timestamp
@@ -95,10 +95,10 @@ func (l Logger) Warnln(message string) {
 // Errf forwards format and args to fmt.Printf with error prefix and timestamp
 func (l Logger) Errf(format string, args ...any) {
 	message := fmt.Sprintf(format, args...)
-	fmt.Printf(FORMAT, l.ErrSprint(l.ErrPrefix), time.Now().Format(l.TimeFormat), message)
+	fmt.Printf(FORMAT, time.Now().Format(l.TimeFormat), l.ErrSprint(l.ErrPrefix), message)
 }
 
 // Errln forwards message to fmt.Printf with error prefix and timestamp
 func (l Logger) Errln(message string) {
-	fmt.Printf(FORMAT+"\n", l.ErrSprint(l.ErrPrefix), time.Now().Format(l.TimeFormat), message)
+	fmt.Printf(FORMAT+"\n", time.Now().Format(l.TimeFormat), l.ErrSprint(l.ErrPrefix), message)
 }
