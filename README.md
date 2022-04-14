@@ -1,3 +1,3 @@
 # tattle
 
-A Go package for consistent log formatting
+A Go package for consistent server log formatting
