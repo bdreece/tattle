@@ -1,7 +1,7 @@
 package format
 
-import _ "github.com/bdreece/tattle/pkg/context"
+import "github.com/bdreece/tattle/pkg/context"
 
-type Builder[C Context, F Format] interface {
+type Builder[C context.Context, F Format] interface {
 	Build(ctx C) F
 }
