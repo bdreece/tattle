@@ -4,13 +4,23 @@ import (
 	"io"
 
 	"github.com/bdreece/tattle/pkg/context"
+	"github.com/bdreece/tattle/pkg/format"
 )
 
 type Logger[C context.Context] struct {
-	Dest io.Writer
-	Factory context.Factory[C]
+	dest io.Writer
+	builder format.Builder[C] 
+}
+
+func NewLogger[C context.Context](dest io.Writer, builder format.Builder[C]) Logger[C] {
+	return Logger[C] {
+		dest,
+		builder,
+	}
 }
 
 func (l Logger[C]) Log(ctx C) {
-	l.Dest.Write([]byte(l.Factory.Create(ctx)))
+	format := l.builder.Build(ctx)
+	log := format.Format()
+	l.dest.Write([]byte(log))
 }

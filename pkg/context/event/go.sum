@@ -1,2 +1,6 @@
+github.com/bdreece/tattle v0.0.0-20220415173210-35fcb48fb2af h1:LTJuQm2WmNaFnpg/2N1uXG2XYukECyc0rr5KwB5R+Bs=
+github.com/bdreece/tattle v0.0.0-20220415173210-35fcb48fb2af/go.mod h1:cOlaX8sbCzsITkWHY0iIi27G5gHDq9f6B88GAvWD5Ls=
+github.com/bdreece/tattle/pkg/context v0.0.0-20220415165133-dc6f825bab97 h1:8uv04lxc7nmW33z8hO2JoYS65BA3afAQBH1Y7tYDlDM=
+github.com/bdreece/tattle/pkg/context v0.0.0-20220415165133-dc6f825bab97/go.mod h1:c1wgPK+Yc+62umdYq6Wdb8d83GLte1YpcwNIwCu4TPs=
 github.com/bdreece/tattle/pkg/format v0.0.0-20220414153317-c2c6df813953 h1:zyJp7svCx3mDSP0kYsbo4P6SlpzRaqe4rptQx1Ux+SU=
 github.com/bdreece/tattle/pkg/format v0.0.0-20220414153317-c2c6df813953/go.mod h1:xeGnJztvt1fAy1EkJkVmRZbGxhDIgTiIWh5g9BlAN0c=
